@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.png">
     <title>Un moment à soi</title>
@@ -18,34 +18,39 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/9d6250a39c.css" />
     <script src="privacy.js" defer></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" defer></script>
+    <script type="text/javascript" src="javascript/smoothscroll.js" defer></script>
   </head>
   <body>
     <main>
       <section id="intro">
-        <img id="intro_logo" src="img/logo_base-line.png" alt="Un moment à soi"
-        /><img class="img_wide" src="img/photos/IMG_6016_2.jpg"
-        /><img class="img_1-4" src="img/photos/IMG_6764_2.jpg"
-        /><img class="img_1-4" src="img/photos/IMG_6235_2.jpg"
-        /><img class="img_1-4" src="img/photos/IMG_6519_2.jpg"
-        /><img class="img_1-4" src="img/photos/IMG_6562_2.jpg" />
+        <img id="intro_logo" src="img/logo_base-line.png" alt="Un moment à soi" />
+        <img class="img_wide" src="img/photos/IMG_6016_2.jpg" />
+        <div id="intro_photosFour">
+          <img class="img_1-4" src="img/photos/IMG_6764_2.jpg" />
+          <img class="img_1-4" src="img/photos/IMG_6235_2.jpg" />
+          <img class="img_1-4" src="img/photos/IMG_6519_2.jpg" />
+          <img class="img_1-4" src="img/photos/IMG_6562_2.jpg" />
+        </div>
       </section>
       <section id="cares" class="back_lightgrey">
-        <div id="bons_plans_img">
-          <img src="img/BONS_PLANS_200px.png" alt="Les bons plans" />
-        </div>
-
         <div>
+          <div id="bons_plans_img">
+            <img src="img/BONS_PLANS_200px.png" alt="Les bons plans" />
+          </div>
           <div class="cares_picBlock">
             <img class="img_round" src="img/photos/IMG_6010_2.jpg" />
           </div>
           <div class="cares_priceBlock">
             <ul>
               <li>
-                <h3>gommage (intégral)*</h3>
+                <h3>gommage (intégral)<span class="txt_orange">*</span></h3>
+                <span class="dotsSpan"></span>
                 <h3>35€</h3>
               </li>
               <li>
                 <h4>gommage (dos) + massage (dos)</h4>
+                <span class="dotsSpan"></span>
                 <h4>35€</h4>
               </li>
               <li>
@@ -53,10 +58,12 @@
                   gommage + massage
                   <span class="txt_small">- 60min</span>
                 </h4>
+                <span class="dotsSpan"></span>
                 <h4>70€</h4>
               </li>
               <li>
                 <h4>gommage + enveloppement</h4>
+                <span class="dotsSpan"></span>
                 <h4>60€</h4>
               </li>
               <li>
@@ -64,34 +71,36 @@
                   gommage + enveloppement + massage
                   <span class="txt_small">- 30min</span>
                 </h4>
+                <span class="dotsSpan"></span>
                 <h4>80€</h4>
               </li>
               <li>
                 <h4>
-                  gommage + enveloppement + massage
+                  <span style="visibility: hidden;">gommage + enveloppement + massage</span>
                   <span class="txt_small">- 60min</span>
                 </h4>
+                <span class="dotsSpan"></span>
                 <h4>100€</h4>
               </li>
 
               <li>
                 <h4>rituel  des  Philippines</h4>
-                <span>
-                  <h4 class="txt_orange">110€ </h4><h4 class="txt_strike">130€</h4>
-                </span>
+                <span class="dotsSpan"></span>
+                <h4><span class="txt_orange">110€ </span><span class="txt_strike">130€</span></h4>
                 <li class="txt_small">
                   gommage + enveloppement + massage coquillages
                 </li>
               </li>
 
               <li>
-                <h3>massage*</h3>
+                <h3>massage<span class="txt_orange">*</span></h3>
               </li>
               <li>
                 <h4>
                   relaxant
                   <span class="txt_small">- 60min</span>
                 </h4>
+                <span class="dotsSpan"></span>
                 <h4>45€</h4>
               </li>
               <li>
@@ -99,6 +108,7 @@
                   chaud  aux  coquillages
                   <span class="txt_small">- 60min</span>
                 </h4>
+                <span class="dotsSpan"></span>
                 <h4>60€</h4>
               </li>
               <li>
@@ -106,6 +116,7 @@
                   bougie
                   <span class="txt_small">- 60min</span>
                 </h4>
+                <span class="dotsSpan"></span>
                 <h4>50€</h4>
               </li>
               <li>
@@ -113,6 +124,7 @@
                   dos
                   <span class="txt_small">- 30min</span>
                 </h4>
+                <span class="dotsSpan"></span>
                 <h4>25€</h4>
               </li>
               <li>
@@ -120,6 +132,7 @@
                   visage
                   <span class="txt_small">- 20min</span>
                 </h4>
+                <span class="dotsSpan"></span>
                 <h4>17€</h4>
               </li>
               <li>
@@ -127,6 +140,7 @@
                   pieds
                   <span class="txt_small">- 20min</span>
                 </h4>
+                <span class="dotsSpan"></span>
                 <h4>17€</h4>
               </li>
               <li>
@@ -134,6 +148,7 @@
                   prénatal
                   <span class="txt_small">- 60min</span>
                 </h4>
+                <span class="dotsSpan"></span>
                 <h4>48€</h4>
               </li>
               <li>
@@ -141,16 +156,21 @@
                   amma (assis)
                   <span class="txt_small">- 20min</span>
                 </h4>
+                <span class="dotsSpan"></span>
                 <h4>18€</h4>
               </li>
               <li>
                 <h4>
-                  amma (assis)
+                  <span style="visibility: hidden;">amma (assis)</span>
                   <span class="txt_small">- 30min</span>
                 </h4>
+                <span class="dotsSpan"></span>
                 <h4>28€</h4>
               </li>
             </ul>
+            <p style="color:white; text-align:right;">
+              <span class="txt_orange">*</span>douche disponible sur place
+            </p>
           </div>
         </div>
 
@@ -159,35 +179,43 @@
             <ul>
               <li>
                 <h3>manucure</h3>
+                <span class="dotsSpan"></span>
                 <h3>17€</h3>
               </li>
               <li>
                 <h4>manucure + vernis</h4>
+                <span class="dotsSpan"></span>
                 <h4>20€</h4>
               </li>
               <li>
                 <h4>manucure + vernis permanent</h4>
+                <span class="dotsSpan"></span>
                 <h4>30€</h4>
               </li>
               <li>
                 <h4>manucure "spa"</h4>
+                <span class="dotsSpan"></span>
                 <h4>25€</h4>
               </li>
 
               <li>
                 <h3>pédicure</h3>
+                <span class="dotsSpan"></span>
                 <h3>22€</h3>
               </li>
               <li>
                 <h4>pédicure + vernis</h4>
+                <span class="dotsSpan"></span>
                 <h4>25€</h4>
               </li>
               <li>
                 <h4>pédicure + vernis permanent</h4>
+                <span class="dotsSpan"></span>
                 <h4>30€</h4>
               </li>
               <li>
                 <h4>pédicure "spa"</h4>
+                <span class="dotsSpan"></span>
                 <h4>30€</h4>
               </li>
 
@@ -196,26 +224,32 @@
               </li>
               <li>
                 <h4>gel sur ongle naturel</h4>
+                <span class="dotsSpan"></span>
                 <h4>40€</h4>
               </li>
               <li>
                 <h4>vernis permanent "peel off"</h4>
+                <span class="dotsSpan"></span>
                 <h4>30€</h4>
               </li>
               <li>
                 <h4>pose vernis permanent</h4>
+                <span class="dotsSpan"></span>
                 <h4>22€</h4>
               </li>
               <li>
                 <h4>dépose vernis permanent</h4>
+                <span class="dotsSpan"></span>
                 <h4>6€</h4>
               </li>
               <li>
                 <h4>pose vernis simple</h4>
+                <span class="dotsSpan"></span>
                 <h4>7€</h4>
               </li>
               <li>
                 <h4>déco</h4>
+                <span class="dotsSpan"></span>
                 <h4>0.50€</h4>
               </li>
             </ul>
@@ -239,6 +273,7 @@
                   express
                   <span class="txt_small">- 30min</span>
                 </h4>
+                <span class="dotsSpan"></span>
                 <h4>25€</h4>
               </li>
               <li>
@@ -246,6 +281,7 @@
                   complète
                   <span class="txt_small">- ~60min</span>
                 </h4>
+                <span class="dotsSpan"></span>
                 <h4>40€</h4>
               </li>
               <li>
@@ -253,6 +289,7 @@
                   pour les enfants
                   <span class="txt_small">- 20min</span>
                 </h4>
+                <span class="dotsSpan"></span>
                 <h4>15€</h4>
               </li>
             </ul>
@@ -267,6 +304,7 @@
                   soin visage express
                   <span class="txt_small">- 40min</span>
                 </h3>
+                <span class="dotsSpan"></span>
                 <h3>35€</h3>
                 <li class="txt_small">nettoyage > gommage > masque > tonique > serum > crème</li>
               </li>
@@ -276,6 +314,7 @@
                   soin visage complet
                   <span class="txt_small">- 60min</span>
                 </h3>
+                <span class="dotsSpan"></span>
                 <h3>55€</h3>
                 <li>peau: sensible, sèche, grasse, mixte, anti-âge</li>
                 <li class="txt_small">nettoyage > gommage > masque > tonique > serum > crème</li>
@@ -297,38 +336,47 @@
             </li>
             <li>
               <h4>demi-jambe</h4>
+              <span class="dotsSpan"></span>
               <h4>14€</h4>
             </li>
             <li>
               <h4>jambe complète</h4>
+              <span class="dotsSpan"></span>
               <h4>23€</h4>
             </li>
             <li>
               <h4>biki simple</h4>
+              <span class="dotsSpan"></span>
               <h4>13€</h4>
             </li>
             <li>
               <h4>menton</h4>
+              <span class="dotsSpan"></span>
               <h4>5€</h4>
             </li>
             <li>
               <h4>sourcils</h4>
+              <span class="dotsSpan"></span>
               <h4>7€</h4>
             </li>
             <li>
               <h4>aisselles</h4>
+              <span class="dotsSpan"></span>
               <h4>8€</h4>
             </li>
             <li>
               <h4>bras</h4>
+              <span class="dotsSpan"></span>
               <h4>13€</h4>
             </li>
             <li>
               <h4>lèvre supérieure</h4>
+              <span class="dotsSpan"></span>
               <h4>6€</h4>
             </li>
             <li>
               <h4>dos</h4>
+              <span class="dotsSpan"></span>
               <h4>20€</h4>
             </li>
           </div>
@@ -342,19 +390,23 @@
               </li>
               <li>
                 <h4>sourcils</h4>
+                <span class="dotsSpan"></span>
                 <h4>10€</h4>
               </li>
               <li>
                 <h4>cils</h4>
+                <span class="dotsSpan"></span>
                 <h4>12€</h4>
               </li>
               <li>
                 <h4>sourcils + cils</h4>
+                <span class="dotsSpan"></span>
                 <h4>18€</h4>
               </li>
 
               <li>
                 <h4>épilation  +  teinture  sourcils</h4>
+                <span class="dotsSpan"></span>
                 <h4>15€</h4>
               </li>
 
@@ -376,7 +428,7 @@
         <img class="img_1-2" src="img/photos/IMG_6759_2.jpg" /><img class="img_1-2" src="img/photos/IMG_6408_2.jpg" />
         <div id="plus_circlesWrapper">
           <div class="plus_circle back_orange"><h2>carte de <strong>fidélité</strong></h2></div>
-          <div class="plus_circle back_orange"><h2>journée/soirée <strong>"bien-être"</strong> entre filles</h2></div>
+          <div class="plus_circle back_orange"><h2>journée/ soirée <strong>"bien-être"</strong> entre filles</h2></div>
           <div class="plus_circle back_orange"><h2>chèques <strong>cadeaux</strong></h2></div>
         </div>
         <div id="plus_logos">
@@ -394,49 +446,56 @@
             <input type="tel" name="phone" placeholder="Téléphone"><br>
             <input type="email" name="email" placeholder="Email" required><br>
             <textarea name="message" rows="8" placeholder="Message"></textarea>
-            <input type="submit" value="Envoyer">
+            <input class="btn" type="submit" value="Envoyer">
           </form>
           <div id="contact_info">
             <h3>uniquement sur rendez-vous</h3>
-            <span>
+            <span style="flex-flow: column;">
               <h4>lundi > vendredi - 9h > 19h30</h4>
               <h4>samedi - 9h > 18h</h4>
             </span>
             <h4>
-              FLORENCE - <strong>0496 11 59 44</strong>
+              FLORENCE -&nbsp<strong> 0496 11 59 44</strong>
             </h4>
             <span>
               <h4>rue des Bigarreaux, 31 - 1180 uccle <span class="txt_small">(parking aisé)</span></h4>
               <span class="txt_small">TRAM  51 - BUS  43, 60, DE LIJN - À PROXIMITÉ DU RING</span>
             </span>
-            <span class="fa fa-facebook-official"></span>
-            <span>
-              <img src="img/car.png" alt="A domicile" />
-              <h4 style="display: inline;">SOINS À DOMICILE</h4><br>
+            <span style="flex-flow: column">
+              <div style="display:flex; flex-flow:row wrap; align-items:flex-end;">
+                <img src="img/car.png" alt="A domicile" />
+                <h4>&nbspSOINS À DOMICILE</h4>
+              </div>
               <span class="txt_small">frais de déplacement à partir de 5€</span>
             </span>
           </div>
         </div>
         <img class="img_wide" src="img/photos/IMG_6052_2.jpg" />
       </section>
-      <footer class="txt_small">
-        <i class="fa fa-copyright"></i> UnMomentASoi.eu<br>
-        Conception web originale <a href="http://feedbydesign.com" target="_blank" class="feed">Feed by Design</a><br>
-        Toutes les photos utilisées sur ce site sont la propriété de Tess Hadri à l'usage de Florence Volant
+      <footer>
+        <a href="https://www.facebook.com/unmomentasoi1/" target="_blank" class="fa fa-facebook-official fa-2x"></a><br>
+        <p>
+          <i class="fa fa-copyright"></i> UnMomentASoi.eu
+        </p>
+        <p>
+          Conception web originale <a href="http://feedbydesign.com" target="_blank" class="feed">Feed by Design</a><br>
+          Toutes les photos utilisées sur ce site sont la propriété de Tess Hadri à l'usage de Florence Volant
+        </p>
       </footer>
     </main>
+
     <nav>
-      <a href="#intro">
-        <i class="fa fa-home fa-2x"></i>
+      <a href="#intro" class="smoothScroll">
+        <i class="fa fa-home fa-lg"></i>
       </a>
-      <a href="#cares">
-        <i class="fa fa-th-list fa-2x"></i>
+      <a href="#cares" class="smoothScroll">
+        <i class="fa fa-th-list fa-lg"></i>
       </a>
-      <a href="#plus">
-        <i class="fa fa-car fa-2x"></i>
+      <a href="#plus" class="smoothScroll">
+        <i class="fa fa-ellipsis-h fa-lg"></i>
       </a>
-      <a href="#contact">
-        <i class="fa fa-phone fa-2x"></i>
+      <a href="#contact" class="smoothScroll">
+        <i class="fa fa-phone fa-lg"></i>
       </a>
     </nav>
   </body>

@@ -1,10 +1,17 @@
-h1, h2, h3, h4, h5, h6, p, a, li, span {
+h1, h2, h3, h4, h5, h6, p, a, li, span, div {
   font-family: sans-serif;
-  color: #6d645f;
+  /*color: #6d645f;*/
 }
-img {
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, a::selection, li::selection, span::selection, div::selection, strong::selection, img::selection {
+  background: #DD4814;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+/*img {
   font-size: 0;
-}
+}*/
 h2 {
   font-weight: 400;
   /*font-size: 1.4em;*/
@@ -42,10 +49,10 @@ nav {
   height: 100%;
   position: fixed;
     top:0;
-    right: 0;
+    /*right: 0;*/
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  /*justify-content: flex-start;*/
 }
 nav a {
   display: flex;
@@ -53,7 +60,8 @@ nav a {
   width: 50px;
   border-radius: 50%;
   margin: auto;
-  border: 2px solid #C90062;
+  border: 1px solid #C90062;
+  background-color: rgba(255, 255, 255, 0.5);;
   color: #6d645f;
 }
 nav a:active, nav a:hover {
@@ -65,8 +73,7 @@ i {
 }
 main {
   width: 100%;
-  margin: 0 80px; /* TODO: same as right nav width */
-
+  margin: 0 0 0 80px; /* TODO: same as right nav width */
 }
 .img_wide {
   width: 100%;
@@ -83,22 +90,30 @@ main {
 }
 .img_round {
   border-radius: 50%;
+  width: 100%;
   max-width: 200px;
-  height: 200px;
+  max-height: 200px;
   object-fit: cover;
   margin: auto;
 }
 #intro {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 #intro_logo {
   max-width: 400px;
+  width: 80%;
   margin: 0 auto 50px;
+}
+#intro_photosFour {
+  display: flex;
 }
 #cares {
   display: flex;
   flex-direction: column;
   padding: 20px 20px;
+  color: #6d645f;
 }
 #cares h4 {
   display: inline;
@@ -109,10 +124,14 @@ main {
 }
 #cares > div {
   display: flex;
+  flex-wrap: wrap;
 }
 #bons_plans_img {
-  flex-direction: row-reverse;
-  margin-right: 30px;
+  width: 96%;
+  text-align: right;
+}
+#bons_plans_img > img {
+  max-width: 100%;
 }
 .cares_picBlock {
   display: flex;
@@ -131,12 +150,26 @@ main {
   display: flex;
   justify-content: space-between;
 }
+#cares li > *:last-child {
+  align-self: flex-end;
+}
+.dotsSpan {
+  flex-grow: 1;
+  /*border-bottom: 1px dotted;*/
+  margin-bottom: 3px;
+  background-image: linear-gradient(to right, #6d645f 33%, rgba(255,255,255,0) 0%);
+  background-position: bottom;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+}
 .txt_small {
-  font-size: .8em;
+  font-size: 13px;
+  text-transform: lowercase;
 }
 #plus_circlesWrapper {
   padding: 50px 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 .plus_circle {
@@ -153,38 +186,67 @@ main {
 }
 #plus_logos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  padding: 20px 0 40px;
 }
 #plus_logos > img {
   max-width: 80px;
   max-height: 30px;
   object-fit: contain;
-  margin: 0 20px 50px;
+  margin: 10px 20px 10px;
 }
 #contact {
   background-color: #6d645f;
 }
 #contact_form_section {
   display: flex;
-  padding: 60px 0;
+  flex-wrap: wrap;
+  padding: 40px 0;
 }
 #contact_form_section > * {
   width: 50%;
-  padding: 0 20px;
+  padding: 20px 20px;
+  box-sizing: border-box;
 }
 input, textarea {
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 5px;
+  resize: vertical;
+  color: #6d645f;
+  /*border: 2px solid #6d645f;*/
+}
+input:focus, textarea:focus {
+  /*background-color: rgba(201,0,98, 0.2);*/
+  /*border: 2px inset #C90062;*/
+}
+.btn {
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  /*background-color: #6d645f;*/
+  color: white;
+  text-transform: uppercase;
+  line-height: 2em;
+  /*font-weight: bold;*/
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: white;
+  color: #C90062;
 }
 #contact_info {
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /*height: 315px;*/
 }
-#contact_info h3, #contact_info h4, #contact_info span {
+#contact_info * {
   color: white;
+  margin-bottom: 5px;
+  display: flex;
+  flex-flow: row wrap;
 }
 #contact_info img {
   height: 30px;
@@ -194,11 +256,61 @@ footer {
   color: white;
   text-align: center;
   padding: 5px 20px 15px;
+  font-size: .8em;
 }
-.feed {
+/*footer > * {
+  margin-bottom: 5px;
+}*/
+footer a {
   text-decoration: none;
   color: white;
+  /*margin: 5px;*/
+}
+footer > a:hover {
+  color: #C90062;
 }
 .feed:hover {
   color: rgb(43, 201, 175);
+}
+
+
+@media (max-width: 1000px) {
+  .cares_picBlock {
+    width: 30%;
+  }
+  .cares_priceBlock {
+    width: 70%;
+  }
+}
+@media (max-width: 800px) {
+  .cares_picBlock {
+    width: 100%;
+    order: 1;
+  }
+  #bons_plans_img {
+    order: 2;
+  }
+  .cares_priceBlock {
+    width: 100%;
+    order: 3;
+  }
+  #contact_form_section {
+    flex-direction: column-reverse;
+  }
+  #contact_form_section > * {
+    width: 100%;
+    min-height: 280px;
+  }
+}
+@media (max-width: 400px) {
+  nav {
+    display: none;
+  }
+  main {
+    margin: 0;
+  }
+  #bons_plans_img > img {
+    max-width: 60%;
+    margin: 20px 2em 0 0;
+  }
 }
