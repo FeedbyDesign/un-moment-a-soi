@@ -12,6 +12,15 @@ a {
 /*img {
   font-size: 0;
 }*/
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+}
+h1 span {
+  font-size:.8em;
+}
 h2 {
   font-weight: 400;
   /*font-size: 1.4em;*/
@@ -104,7 +113,7 @@ main {
 #intro_logo {
   max-width: 400px;
   width: 80%;
-  margin: 0 auto 50px;
+  margin: 30px auto 50px;
 }
 #intro_photosFour {
   display: flex;
@@ -180,6 +189,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 10px;
 }
 #plus h2 {
   color: white;
@@ -202,7 +212,7 @@ main {
 #contact_form_section {
   display: flex;
   flex-wrap: wrap;
-  padding: 40px 0;
+  padding: 10px 0 40px;
 }
 #contact_form_section > * {
   width: 50%;
@@ -242,7 +252,7 @@ input:focus, textarea:focus {
   justify-content: space-between;
   /*height: 315px;*/
 }
-#contact_info * {
+#contact_info > * {
   color: white;
   margin-bottom: 5px;
   display: flex;
