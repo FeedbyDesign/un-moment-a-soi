@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section id="contact">
       <img className="img_wide" src="img/photos/IMG_5995_2.jpg" />
-      <h1 style={{color: 'white'}}><span>⚫</span> Un espace pour vous <span>⚫</span></h1>
+      <h1 style={{color: 'white'}}>•&nbsp;Un espace pour vous&nbsp;•</h1>
       <div id="contact_form_section">
         <form name="contact" action="thanks">
           <input type="text" name="name" placeholder="Nom" required />

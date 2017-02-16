@@ -5,7 +5,7 @@ const Plus = () => {
     <section id="plus">
       <img className="img_1-2" src="img/photos/IMG_6759_2.jpg" />
       <img className="img_1-2" src="img/photos/IMG_6408_2.jpg" />
-      <h1 style={{color: '#6d645f'}}><span>⚫</span> Les petits plus <span>⚫</span></h1>
+      <h1 style={{color: '#6d645f'}}>•&nbsp;Les petits plus&nbsp;•</h1>
       <div id="plus_circlesWrapper">
         <div className="plus_circle back_orange"><h2>carte de <strong>fidélité</strong></h2></div>
         <div className="plus_circle back_orange"><h2>journée/ soirée <strong>"bien-être"</strong> entre filles</h2></div>
