@@ -9,6 +9,7 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
 a {
   text-decoration: none;
   cursor: pointer;
+  border-bottom: 1px dashed #DD4814;
 }
 /*img {
   font-size: 0;
