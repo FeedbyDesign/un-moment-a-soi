@@ -8,7 +8,6 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
 }
 a {
   text-decoration: none;
-  cursor: pointer;
 }
 /*img {
   font-size: 0;
@@ -53,49 +52,6 @@ body > * > * {
   max-width: 1300px;
   margin: auto;
 }
-dialog {
-  background-color: rgba(255, 255, 255, 0.5);
-  border: none;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  position: fixed;
-  display: flex;
-  padding: 0 0 0 80px;
-  /*display: none;*/
-}
-dialog i {
-  position: absolute;
-    right: 10px;
-    top: 10px;
-  /*border: 1px solid white;
-  border-radius: 50%;
-  padding: 3px;*/
-}
-dialog i:hover {
-  cursor: pointer;
-}
-dialog > div {
-  background-color: #6d645f;
-  margin: auto;
-  max-width: 500px;
-  width: 90%;
-  min-height: 50%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /*padding-bottom: 30px;*/
-}
-dialog > div > div:first-child {
-  position: relative;
-  padding: 20px 20px 0;
-  text-align: justify;
-}
-dialog > div > div:last-child {
-  margin: 30px 0;
-  display: flex;
-}
 nav {
   width: 80px;
   height: 100%;
@@ -135,11 +91,6 @@ main {
 .img_1-4 {
   width: 25%;
   height: 150px;
-  object-fit: cover;
-}
-.img_1-3 {
-  width: 33.34%;
-  max-height: 150px;
   object-fit: cover;
 }
 .img_1-2 {
@@ -370,8 +321,5 @@ footer > a:hover {
   #bons_plans_img > img {
     max-width: 60%;
     margin: 20px 2em 0 0;
-  }
-  dialog {
-    padding: 0;
   }
 }

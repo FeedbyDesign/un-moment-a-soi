@@ -8,7 +8,7 @@ export default (props) => {
       <ul>
         {
           props.list.map((entry, index) => {
-            return <PriceEntry key={index} entry={entry}/>
+            return <PriceEntry key={index} entry={entry} openDialog={props.openDialog}/>
           })
         }
 

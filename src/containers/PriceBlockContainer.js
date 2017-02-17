@@ -30,7 +30,7 @@ class PriceBlockContainer extends Component {
     })
   }
   render() {
-    return <PriceBlock list={this.state.priceList} position={this.props.position}/>
+    return <PriceBlock list={this.state.priceList} position={this.props.position} openDialog={(title, text)=>this.props.openDialog(title, text)}/>
   }
 }
 

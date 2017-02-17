@@ -8,6 +8,8 @@ import React from 'react'
 // 4:"35" //prix
 // 5:"35" //prix promo
 // 6:"Oui" //Astérisque si "Oui"
+// 7: //Titre de la description pour la dialog box
+// 8: //Description pour la dialog box
 
 export default (props) => {
 
@@ -18,7 +20,12 @@ export default (props) => {
       entry = (
         <li>
           <h3>
-            {props.entry[2] === "Oui" ? <span style={{visibility: 'hidden'}}>{props.entry[0]}</span> : props.entry[0]}
+            {props.entry[2] === "Oui" ?
+              <span style={{visibility: 'hidden'}}>{props.entry[0]}</span> :
+              props.entry[7] ?
+                <a onClick={()=>props.openDialog(props.entry[7], props.entry[8])}>{props.entry[0]}</a> :
+                props.entry[0]
+            }
             {props.entry[6] === "Oui" ? <span className="txt_orange">*</span> : null}
             {props.entry[3] ? <span className="txt_small">{' '+props.entry[3]}</span> : null}
           </h3>
@@ -33,7 +40,12 @@ export default (props) => {
       entry = (
         <li>
           <h4>
-            {props.entry[2] === "Oui" ? <span style={{visibility: 'hidden'}}>{props.entry[0]}</span> : props.entry[0]}
+            {props.entry[2] === "Oui" ?
+              <span style={{visibility: 'hidden'}}>{props.entry[0]}</span> :
+              props.entry[7] ?
+                <a onClick={()=>props.openDialog(props.entry[7], props.entry[8])}>{props.entry[0]}</a> :
+                props.entry[0]
+            }
             {props.entry[6] === "Oui" ? <span className="txt_orange">*</span> : null}
             {props.entry[3] ? <span className="txt_small">{' '+props.entry[3]}</span> : null}
           </h4>
