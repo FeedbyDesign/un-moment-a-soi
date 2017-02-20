@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Nav = () => {
+const Nav = (props) => {
   return (
-    <nav>
+    <nav style={props.navStyle} onMouseEnter={props.openMenu}>
       <a href="#intro">
         <i className="fa fa-home fa-lg" />
       </a>

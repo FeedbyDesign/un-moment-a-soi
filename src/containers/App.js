@@ -4,7 +4,7 @@ import Cares from '../Cares'
 import Plus from '../Plus'
 import Contact from '../Contact'
 import Footer from '../Footer'
-import Nav from '../Nav'
+import Nav from './NavContainer'
 import Dialog from './DialogContainer'
 
 
@@ -14,11 +14,30 @@ class App extends Component {
     this.state = {
       dialogOpen: false,
       dialogTitle: '',
-      dialogText: ''
+      dialogText: '',
+      pagePosition: 0
     }
+    this.checkPosition = this.checkPosition.bind(this)
+  }
+  componentDidMount() {
+    window.addEventListener('scroll', this.checkPosition)
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.checkPosition)
   }
   toggleDialog(title='', text='') {
     this.setState({dialogOpen: !this.state.dialogOpen, dialogTitle: title, dialogText: text})
+  }
+  checkPosition() {
+    if (document.getElementById("intro").getBoundingClientRect().top<5 && document.getElementById("intro").getBoundingClientRect().bottom>4) {
+      this.setState({pagePosition: 0})
+    } else if (document.getElementById("cares").getBoundingClientRect().top<5 && document.getElementById("cares").getBoundingClientRect().bottom>4) {
+      this.setState({pagePosition: 1})
+    } else if (document.getElementById("plus").getBoundingClientRect().top<5 && document.getElementById("plus").getBoundingClientRect().bottom>4) {
+      this.setState({pagePosition: 2})
+    } else if (document.getElementById("contact").getBoundingClientRect().top<=5 && document.getElementById("contact").getBoundingClientRect().bottom>4) {
+      this.setState({pagePosition: 3})
+    }
   }
   render() {
     return (
@@ -31,7 +50,7 @@ class App extends Component {
           <Contact />
           <Footer />
         </main>
-        <Nav />
+        <Nav pagePosition={this.state.pagePosition} />
       </div>
     )
   }
