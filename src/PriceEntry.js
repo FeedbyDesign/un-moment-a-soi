@@ -10,6 +10,7 @@ import React from 'react'
 // 6:"Oui" //Astérisque si "Oui"
 // 7: //Titre de la description pour la dialog box
 // 8: //Description pour la dialog box
+// 9: //imgRef pour la dialog box
 
 export default (props) => {
 
@@ -23,7 +24,7 @@ export default (props) => {
             {props.entry[2] === "Oui" ?
               <span style={{visibility: 'hidden'}}>{props.entry[0]}</span> :
               props.entry[7] ?
-                <a onClick={()=>props.openDialog(props.entry[7], props.entry[8])}>{props.entry[0]}</a> :
+                <a onClick={()=>props.openDialog(props.entry[7], props.entry[8], props.entry[9])}>{props.entry[0]}</a> :
                 props.entry[0]
             }
             {props.entry[6] === "Oui" ? <span className="txt_orange">*</span> : null}
@@ -43,7 +44,7 @@ export default (props) => {
             {props.entry[2] === "Oui" ?
               <span style={{visibility: 'hidden'}}>{props.entry[0]}</span> :
               props.entry[7] ?
-                <a onClick={()=>props.openDialog(props.entry[7], props.entry[8])}>{props.entry[0]}</a> :
+                <a onClick={()=>props.openDialog(props.entry[7], props.entry[8], props.entry[9])}>{props.entry[0]}</a> :
                 props.entry[0]
             }
             {props.entry[6] === "Oui" ? <span className="txt_orange">*</span> : null}

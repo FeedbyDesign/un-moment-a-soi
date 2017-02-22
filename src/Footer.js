@@ -9,7 +9,7 @@ const Footer = () => {
       </p>
       <p>
         Conception web originale <a href="http://feedbydesign.com" target="_blank" className="feed">Feed by Design</a><br />
-        Toutes les photos utilisées sur ce site sont la propriété de Tess Hadri à l'usage de Florence Volant
+        Toutes les photos et illustrations utilisées sur ce site sont la propriété de Tess Hadri à l'usage de Florence Volant
       </p>
     </footer>
   )

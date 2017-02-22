@@ -25,7 +25,7 @@ class NavContainer extends Component {
     this.setState({navStyle: {height: '260px', top: '0'}})
   }
   render() {
-    return <Nav navStyle={this.state.navStyle} openMenu={this.openMenu} />
+    return <Nav navStyle={this.state.navStyle} openMenu={this.openMenu} closeMenu={this.updatePosition} />
   }
 }
 

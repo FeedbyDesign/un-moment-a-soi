@@ -9,7 +9,7 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
 a {
   text-decoration: none;
   cursor: pointer;
-  border-bottom: 1px dashed #DD4814;
+  color: inherit;
 }
 /*img {
   font-size: 0;
@@ -66,15 +66,13 @@ dialog {
   /*display: none;*/
 }
 dialog i {
+  cursor: pointer;
   position: absolute;
     right: 10px;
     top: 10px;
   /*border: 1px solid white;
   border-radius: 50%;
   padding: 3px;*/
-}
-dialog i:hover {
-  cursor: pointer;
 }
 dialog > div {
   background-color: #6d645f;
@@ -93,9 +91,14 @@ dialog > div > div:first-child {
   padding: 20px 20px 0;
   text-align: justify;
 }
-dialog > div > div:last-child {
+.DialogImgRow {
   margin: 30px 0;
   display: flex;
+}
+.DialogImgRow img {
+  width: 50%;
+  max-height: 150px;
+  object-fit: cover;
 }
 nav {
   width: 80px;
@@ -149,11 +152,6 @@ main {
   height: 150px;
   object-fit: cover;
 }
-.img_1-3 {
-  width: 33.34%;
-  max-height: 150px;
-  object-fit: cover;
-}
 .img_1-2 {
   width: 50%;
 }
@@ -194,6 +192,13 @@ main {
 #cares > div {
   display: flex;
   flex-wrap: wrap;
+}
+#cares a {
+  border-bottom: 1px solid white;
+}
+#cares a:hover {
+  border-bottom: 1px solid #DD4814;
+  color: #DD4814;
 }
 #bons_plans_img {
   width: 96%;
@@ -250,9 +255,15 @@ main {
   flex-direction: column;
   justify-content: center;
   margin-top: 10px;
+  background-color: #DD4814;
+  color: white;
+}
+.plus_circle:hover {
+  background-color: #CDC6C0;
+  color: #DD4814;
 }
 #plus h2 {
-  color: white;
+  /*color: white;*/
 }
 #plus_logos {
   display: flex;
@@ -272,10 +283,11 @@ main {
 #contact_form_section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 10px 0 40px;
 }
 #contact_form_section > * {
-  width: 50%;
+  width: 40%;
   padding: 20px 20px;
   box-sizing: border-box;
 }
@@ -321,6 +333,9 @@ input:focus, textarea:focus {
 #contact_info img {
   height: 30px;
 }
+#contact a:hover {
+  color: #C90062;
+}
 footer {
   background-color: #6d645f;
   color: white;
@@ -351,6 +366,9 @@ footer > a:hover {
   .cares_priceBlock {
     width: 70%;
   }
+  #contact_form_section > * {
+    width: 50%;
+  }
 }
 @media (max-width: 800px) {
   .cares_picBlock {
@@ -366,9 +384,10 @@ footer > a:hover {
   }
   #contact_form_section {
     flex-direction: column-reverse;
+    align-items: center;
   }
   #contact_form_section > * {
-    width: 100%;
+    width: 400px;
     min-height: 280px;
   }
 }
@@ -382,6 +401,9 @@ footer > a:hover {
   #bons_plans_img > img {
     max-width: 60%;
     margin: 20px 2em 0 0;
+  }
+  #contact_form_section > * {
+    width: 100%;
   }
   dialog {
     padding: 0;

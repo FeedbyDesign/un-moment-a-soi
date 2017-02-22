@@ -23,7 +23,7 @@ const Cares = (props) => {
       </div>
 
       <div>
-        <PriceBlockContainer openDialog={props.openDialog} position={2} />
+        <PriceBlockContainer openDialog={props.openDialog} position={1} />
         <div className="cares_picBlock">
           <img className="img_round" src={round3} alt="réflexologie" />
         </div>
@@ -33,7 +33,7 @@ const Cares = (props) => {
         <div className="cares_picBlock">
           <img className="img_round" src={round2} alt="vernis" />
         </div>
-        <PriceBlockContainer openDialog={props.openDialog} position={1} />
+        <PriceBlockContainer openDialog={props.openDialog} position={2} />
       </div>
 
       <div>
@@ -47,11 +47,11 @@ const Cares = (props) => {
         <div className="cares_picBlock">
           <img className="img_round" src={round6} alt="teintures" />
         </div>
-        <PriceBlockContainer openDialog={props.openDialog} position={5} />
+        <PriceBlockContainer openDialog={props.openDialog} position={4} />
       </div>
 
       <div>
-        <PriceBlockContainer openDialog={props.openDialog} position={4} />
+        <PriceBlockContainer openDialog={props.openDialog} position={5} />
         <div className="cares_picBlock">
           <img className="img_round" src={round5} alt="épilation" />
         </div>

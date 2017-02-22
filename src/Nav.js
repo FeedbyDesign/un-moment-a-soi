@@ -2,7 +2,7 @@ import React from 'react'
 
 const Nav = (props) => {
   return (
-    <nav style={props.navStyle} onMouseEnter={props.openMenu}>
+    <nav style={props.navStyle} onMouseEnter={props.openMenu} onMouseLeave={props.closeMenu}>
       <a href="#intro">
         <i className="fa fa-home fa-lg" />
       </a>
