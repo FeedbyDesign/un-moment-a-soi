@@ -17,7 +17,7 @@ class ContactForm extends Component {
 
   handleSubmit(event) {
     // alert('A name was submitted: ' + this.state.value);
-    // event.preventDefault();
+    event.preventDefault();
 
     fetch("/form.html", {
       method: "POST",
