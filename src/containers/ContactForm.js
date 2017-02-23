@@ -28,13 +28,20 @@ class ContactForm extends Component {
     // alert('A name was submitted: ' + this.state.value);
     event.preventDefault();
 
-    var myHeaders = new Headers();
+    let myHeaders = new Headers();
     myHeaders.append('Content-Type', 'application/x-www-form-urlencoded');
 
     fetch("/form", {
       method: "POST",
       headers: myHeaders,
       body: "form-name=contact1&name=" + this.state.name + "&phone=" + this.state.phone + "&email=" + this.state.email + "&message=" + this.state.message
+    })
+    .then((res) => {
+      if (res.status >= 400) {
+        throw new Error("Bad response from server")
+      } else if (res.status = 200) {
+        console.log('request successful');
+      }
     })
 
     // fetch(url)
