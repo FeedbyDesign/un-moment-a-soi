@@ -1,6 +1,7 @@
 h1, h2, h3, h4, h5, h6, p, a, li, span, div {
   font-family: sans-serif;
   /*color: #6d645f;*/
+  white-space:pre-wrap;
 }
 h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, a::selection, li::selection, span::selection, div::selection, strong::selection, img::selection {
   background: #DD4814;

@@ -13,7 +13,7 @@ export default (props) => {
         <div>
           <i onClick={props.closeDialog} className="fa fa-times" />
           <h3>{props.title}</h3>
-          <p className="txt_small">{props.text}</p>
+          <p className="txt_small" style={{textTransform: "none"}}>{props.text}</p>
         </div>
         {imgs}
       </div>

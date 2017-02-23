@@ -15,12 +15,13 @@ class App extends Component {
       dialogOpen: false,
       dialogTitle: '',
       dialogText: '',
-      dialogImgRef: 'amma',
+      dialogImgRef: '',
       pagePosition: 0
     }
     this.checkPosition = this.checkPosition.bind(this)
   }
   componentDidMount() {
+    setTimeout(()=>{this.checkPosition()}, 1000)
     window.addEventListener('scroll', this.checkPosition)
   }
   componentWillUnmount() {

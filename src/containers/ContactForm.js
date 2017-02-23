@@ -25,7 +25,6 @@ class ContactForm extends Component {
   handleMessageChange(event) {this.setState({message: event.target.value})}
 
   handleSubmit(event) {
-    // alert('A name was submitted: ' + this.state.value);
     event.preventDefault();
 
     let myHeaders = new Headers();
@@ -38,20 +37,17 @@ class ContactForm extends Component {
     })
     .then((res) => {
       if (res.status >= 400) {
+        this.props.openDialog('Ooops :(', "Un problème est survenu lors de l'envoi du formulaire. Pouvez-vous me contactez directement par téléphone au 0496.11.59.44.\nMerci.\n\nFlorence")
         throw new Error("Bad response from server")
-        this.props.openDialog('Un problème est survenu', "S'il-vous-plait, contactez-moi directement par téléphone au 0496 11 59 44. Merci.")
       } else if (res.status === 200) {
         console.log('request successful')
-        this.props.openDialog('Merci pour votre message', '')
+        this.props.openDialog('Bien reçu !', 'Merci pour votre message. Je vous recontacte au plus vite.\n\nFlorence')
         this.setState({
           name: '',
           phone: '',
           email: '',
           message: ''
         })
-        // TODO: empty state
-        // TODO: open dialog with 'Merci pour votre message'
-
       }
     })
   }
