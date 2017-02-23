@@ -19,7 +19,7 @@ class ContactForm extends Component {
     // alert('A name was submitted: ' + this.state.value);
     // event.preventDefault();
 
-    fetch("/thanks", {
+    fetch("/thanks.html", {
       method: "POST",
       body: "form-name=test&value=" + this.state.value
     })
