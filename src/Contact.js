@@ -9,20 +9,13 @@ import carIcon from './img/car.png'
 
 // TODO: add 'netlify' to the form
 
-const Contact = () => {
+const Contact = (props) => {
   return (
     <section id="contact">
       <img className="img_wide" src={Contact_img_wide1} alt="Salon" />
       <h1 style={{color: 'white'}}>•&nbsp;Un espace pour vous&nbsp;•</h1>
       <div id="contact_form_section">
-        <ContactForm />
-        <form name="contact1" action="/form" method="post" data-netlify="true">
-          <input type="text" name="name" placeholder="Nom" required />
-          <input type="tel" name="phone" placeholder="Téléphone" />
-          <input type="email" name="email" placeholder="Email" required />
-          <textarea name="message" rows={8} placeholder="Message" />
-          <input className="btn" type="submit" defaultValue="Envoyer" />
-        </form>
+        <ContactForm openDialog={props.openDialog}/>
         <div id="contact_info">
           <h3>uniquement sur rendez-vous</h3>
           <span style={{flexFlow: 'column'}}>

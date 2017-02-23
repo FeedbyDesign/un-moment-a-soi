@@ -19,7 +19,6 @@ class App extends Component {
       pagePosition: 0
     }
     this.checkPosition = this.checkPosition.bind(this)
-    this.submitForm = this.submitForm.bind(this)
   }
   componentDidMount() {
     window.addEventListener('scroll', this.checkPosition)
@@ -42,20 +41,6 @@ class App extends Component {
       this.setState({pagePosition: 3})
     }
   }
-  submitForm() {
-    // const url='https://sheets.googleapis.com/v4/spreadsheets/'+sheet+'/values/'+(this.props.position+1)+'?key='+api
-    // fetch(url)
-    // .then((res) => {
-    //   if (res.status >= 400) {
-    //     throw new Error("Bad response from server")
-    //   }
-    //   return res.json()
-    // })
-    // .then((json) => {
-    //   let priceList = json.values.slice(1)
-    //   this.setState({priceList})
-    // })
-  }
 
   render() {
     return (
@@ -65,7 +50,7 @@ class App extends Component {
           <Intro />
           <Cares openDialog={(title, text, imgRef)=>this.toggleDialog(title, text, imgRef)} />
           <Plus openDialog={(title, text, imgRef)=>this.toggleDialog(title, text, imgRef)} />
-          <Contact submitForm={this.submitForm}/>
+          <Contact openDialog={(title, text)=>this.toggleDialog(title, text)} />
           <Footer />
         </main>
         <Nav pagePosition={this.state.pagePosition} />

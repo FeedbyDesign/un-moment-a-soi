@@ -39,39 +39,41 @@ class ContactForm extends Component {
     .then((res) => {
       if (res.status >= 400) {
         throw new Error("Bad response from server")
-      } else if (res.status == 200) {
-        console.log('request successful');
+        this.props.openDialog('Un problème est survenu', "S'il-vous-plait, contactez-moi directement par téléphone au 0496 11 59 44. Merci.")
+      } else if (res.status === 200) {
+        console.log('request successful')
+        this.props.openDialog('Merci pour votre message', '')
+        this.setState({
+          name: '',
+          phone: '',
+          email: '',
+          message: ''
+        })
+        // TODO: empty state
+        // TODO: open dialog with 'Merci pour votre message'
+
       }
     })
-
-    // fetch(url)
-    // .then((res) => {
-    //   if (res.status >= 400) {
-    //     throw new Error("Bad response from server")
-    //   }
-    //   return res.json()
-    // })
-    // .then((json) => {
-    //   let priceList = json.values.slice(1)
-    //   this.setState({priceList})
-    // })
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} name="contact1" data-netlify="true">
-        <input type="text" name="name" placeholder="Nom" value={this.state.name} onChange={this.handleNameChange} required />
-        <input type="tel" name="phone" placeholder="Téléphone" value={this.state.phone} onChange={this.handlePhoneChange} />
-        <input type="email" name="email" placeholder="Email" value={this.state.email} onChange={this.handleEmailChange} required />
-        <textarea name="message" rows={8} placeholder="Message" value={this.state.message} onChange={this.handleMessageChange} />
-        <input className="btn" type="submit" value="Envoyer" />
-      </form>
-    );
+      !window ? null : (
+        <form onSubmit={this.handleSubmit} name="contact1" data-netlify="true">
+          <input type="text" name="name" placeholder="Nom" value={this.state.name} onChange={this.handleNameChange} required />
+          <input type="tel" name="phone" placeholder="Téléphone" value={this.state.phone} onChange={this.handlePhoneChange} />
+          <input type="email" name="email" placeholder="Email" value={this.state.email} onChange={this.handleEmailChange} required />
+          <textarea name="message" rows={8} placeholder="Message" value={this.state.message} onChange={this.handleMessageChange} />
+          <input className="btn" type="submit" value="Envoyer" />
+        </form>
+      )
+    )
   }
 }
 
 export default ContactForm
 
+// Request needs to look like:
 // REQUEST HEADER
 // :authority:react--un-moment-a-soi.netlify.com
 // :method:POST
