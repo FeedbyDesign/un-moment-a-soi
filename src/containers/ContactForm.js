@@ -39,7 +39,7 @@ class ContactForm extends Component {
     .then((res) => {
       if (res.status >= 400) {
         throw new Error("Bad response from server")
-      } else if (res.status = 200) {
+      } else if (res.status == 200) {
         console.log('request successful');
       }
     })
