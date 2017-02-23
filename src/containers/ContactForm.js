@@ -19,7 +19,7 @@ class ContactForm extends Component {
     // alert('A name was submitted: ' + this.state.value);
     event.preventDefault();
 
-    fetch("/form.html", {
+    fetch("/form", {
       method: "POST",
       body: "form-name=test&value=" + this.state.value
     })
@@ -40,7 +40,6 @@ class ContactForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} name="test" data-netlify="true">
-        <input type="hidden" name="form-name" value="test" />
         <input name="value" type="text" value={this.state.value} onChange={this.handleChange} />
         <input type="submit" value="Submit" />
       </form>

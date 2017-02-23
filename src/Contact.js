@@ -16,7 +16,7 @@ const Contact = () => {
       <h1 style={{color: 'white'}}>•&nbsp;Un espace pour vous&nbsp;•</h1>
       <div id="contact_form_section">
         <ContactForm />
-        <form name="contact1" action="thanks" data-netlify="true">
+        <form name="contact1" action="/form" method="post" data-netlify="true">
           <input type="text" name="name" placeholder="Nom" required />
           <input type="tel" name="phone" placeholder="Téléphone" />
           <input type="email" name="email" placeholder="Email" required />
