@@ -5,15 +5,24 @@ require('isomorphic-fetch');
 class ContactForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {
+      name: '',
+      phone: '',
+      email: '',
+      message: ''
+    }
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handlePhoneChange = this.handlePhoneChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handleMessageChange = this.handleMessageChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
+  handleNameChange(event) {this.setState({name: event.target.value})}
+  handlePhoneChange(event) {this.setState({phone: event.target.value})}
+  handleEmailChange(event) {this.setState({email: event.target.value})}
+  handleMessageChange(event) {this.setState({message: event.target.value})}
 
   handleSubmit(event) {
     // alert('A name was submitted: ' + this.state.value);
@@ -25,7 +34,7 @@ class ContactForm extends Component {
     fetch("/form", {
       method: "POST",
       headers: myHeaders,
-      body: "form-name=test&value=" + this.state.value
+      body: "form-name=contact1&name=" + this.state.name + "&phone=" + this.state.phone + "&email=" + this.state.email + "&message=" + this.state.message
     })
 
     // fetch(url)
@@ -43,9 +52,12 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} name="test" data-netlify="true">
-        <input name="value" type="text" value={this.state.value} onChange={this.handleChange} />
-        <input type="submit" value="Submit" />
+      <form onSubmit={this.handleSubmit} name="contact1" data-netlify="true">
+        <input type="text" name="name" placeholder="Nom" value={this.state.name} onChange={this.handleNameChange} required />
+        <input type="tel" name="phone" placeholder="Téléphone" value={this.state.phone} onChange={this.handlePhoneChange} />
+        <input type="email" name="email" placeholder="Email" value={this.state.email} onChange={this.handleEmailChange} required />
+        <textarea name="message" rows={8} placeholder="Message" value={this.state.message} onChange={this.handleMessageChange} />
+        <input className="btn" type="submit" value="Envoyer" />
       </form>
     );
   }
