@@ -1,5 +1,7 @@
 import React from 'react'
 
+import ContactForm from './containers/ContactForm'
+
 import Contact_img_wide1 from './img/photos/IMG_5995_2.jpg'
 import Contact_img_wide2 from './img/photos/IMG_6052_2.jpg'
 
@@ -13,7 +15,8 @@ const Contact = () => {
       <img className="img_wide" src={Contact_img_wide1} alt="Salon" />
       <h1 style={{color: 'white'}}>•&nbsp;Un espace pour vous&nbsp;•</h1>
       <div id="contact_form_section">
-        <form name="contact" action="thanks" data-netlify="true">
+        <ContactForm />
+        <form name="contact1" action="thanks" data-netlify="true">
           <input type="text" name="name" placeholder="Nom" required />
           <input type="tel" name="phone" placeholder="Téléphone" />
           <input type="email" name="email" placeholder="Email" required />
