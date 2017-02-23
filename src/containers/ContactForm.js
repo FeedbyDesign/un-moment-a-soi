@@ -40,7 +40,7 @@ class ContactForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} name="test" data-netlify="true">
-        <input type="hidden" name="form-name" value="test">
+        <input type="hidden" name="form-name" value="test" />
         <input name="value" type="text" value={this.state.value} onChange={this.handleChange} />
         <input type="submit" value="Submit" />
       </form>
