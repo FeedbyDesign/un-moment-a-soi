@@ -10,6 +10,12 @@ import carIcon from './img/car.png'
 // TODO: add 'netlify' to the form
 
 const Contact = (props) => {
+
+  let phoneNumber = ' 0496 11 59 44'
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   phoneNumber = <a href="tel:+32496115944"> 0496 11 59 44</a>
+  }
+
   return (
     <section id="contact">
       <img className="img_wide" src={Contact_img_wide1} alt="Salon" />
@@ -23,7 +29,7 @@ const Contact = (props) => {
             <h4>samedi - 9h &gt; 18h</h4>
           </span>
           <h4>
-            FLORENCE -&nbsp;<strong> 0496 11 59 44</strong>
+            FLORENCE -&nbsp;<strong>{phoneNumber}</strong>
           </h4>
           <span style={{flexFlow: 'column'}}>
             <h4>
