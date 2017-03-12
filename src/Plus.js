@@ -19,7 +19,7 @@ const Plus = (props) => {
       <img className="img_1-2" src={img_12_2} alt="Salon" />
       <h1 style={{color: '#6d645f'}}>•&nbsp;Les petits plus&nbsp;•</h1>
       <div id="plus_circlesWrapper">
-        <a onClick={()=>props.openDialog('Carte de fidélité', txtCarteFidelite)}>
+        <a onClick={()=>props.openDialog('Carte de fidélité', txtCarteFidelite, 'carteFidelite')}>
           <div className="plus_circle"><h2>carte de <strong>fidélité</strong></h2></div>
         </a>
         <a onClick={()=>props.openDialog('Soirée bien-être entre amies', txtEntreFilles, 'soireeFilles')}>

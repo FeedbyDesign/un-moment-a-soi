@@ -5,10 +5,10 @@ import PriceBlockContainer from './containers/PriceBlockContainer'
 import bonsPlans from './img/BONS_PLANS_200px.png'
 import round1 from './img/photos/IMG_6010_2.jpg'
 import round2 from './img/photos/IMG_6370_2.jpg'
-import round3 from './img/photos/illu_2_200.jpg'
-import round4 from './img/photos/illu_1_200.jpg'
-import round5 from './img/photos/illu_3_200.jpg'
-import round6 from './img/photos/IMG_6227_2.jpg'
+import round3 from './img/photos/IMG_6495_2.jpg'
+import round4 from './img/photos/IMG_6190_2.jpg'
+import round5 from './img/photos/IMG_6908_2.jpg'
+import round6 from './img/photos/IMG_6953_2.jpg'
 
 const Cares = (props) => {
   return (
@@ -25,13 +25,13 @@ const Cares = (props) => {
       <div>
         <PriceBlockContainer openDialog={props.openDialog} position={1} />
         <div className="cares_picBlock">
-          <img className="img_round" src={round3} alt="réflexologie" />
+          <img className="img_round" src={round2} alt="vernis" />
         </div>
       </div>
 
       <div>
         <div className="cares_picBlock">
-          <img className="img_round" src={round2} alt="vernis" />
+        <img className="img_round" src={round3} alt="réflexologie" />
         </div>
         <PriceBlockContainer openDialog={props.openDialog} position={2} />
       </div>
@@ -45,7 +45,7 @@ const Cares = (props) => {
 
       <div>
         <div className="cares_picBlock">
-          <img className="img_round" src={round6} alt="teintures" />
+        <img className="img_round" src={round5} alt="épilation" />
         </div>
         <PriceBlockContainer openDialog={props.openDialog} position={4} />
       </div>
@@ -53,9 +53,10 @@ const Cares = (props) => {
       <div>
         <PriceBlockContainer openDialog={props.openDialog} position={5} />
         <div className="cares_picBlock">
-          <img className="img_round" src={round5} alt="épilation" />
+        <img className="img_round" src={round6} alt="teintures" />
         </div>
       </div>
+
     </section>
   )
 }

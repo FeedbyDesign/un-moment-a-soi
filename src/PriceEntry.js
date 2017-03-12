@@ -52,7 +52,7 @@ export default (props) => {
           </h4>
           {props.entry[4] ? <span className="dotsSpan" /> : null}
           {props.entry[5] ?
-            <h4><span className="txt_orange">{props.entry[5]+' '}</span><span className="txt_strike">{props.entry[4]}</span></h4> :
+            <h4><span className="txt_orange">{props.entry[5]}</span>&nbsp;<span className="txt_strike">{props.entry[4]}</span></h4> :
             <h4>{props.entry[4]}</h4>}
         </li>
       )

@@ -63,7 +63,7 @@ dialog {
   box-sizing: border-box;
   position: fixed;
   display: flex;
-  padding: 0 0 0 80px;
+  /*padding: 0 0 0 80px;*/
   /*display: none;*/
 }
 dialog i {
@@ -81,11 +81,12 @@ dialog > div {
   max-width: 500px;
   width: 90%;
   max-height: 500px;
-  height: 50%;
+  height: 90%;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: auto;
   /*padding-bottom: 30px;*/
 }
 dialog > div > div:first-child {
