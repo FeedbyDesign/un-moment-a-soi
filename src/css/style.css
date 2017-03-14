@@ -1,3 +1,8 @@
+@font-face {
+    font-family: montserrat;
+    src: url(./Montserrat-Regular.ttf);
+}
+
 h1, h2, h3, h4, h5, h6, p, a, li, span, div {
   font-family: sans-serif;
   /*color: #6d645f;*/
@@ -16,7 +21,7 @@ a {
   font-size: 0;
 }*/
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: montserrat, sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   text-align: center;
@@ -29,7 +34,7 @@ h2 {
   /*font-size: 1.4em;*/
 }
 h3 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: montserrat, sans-serif;
   display: inline;
   margin: 0;
   line-height: 1em;
