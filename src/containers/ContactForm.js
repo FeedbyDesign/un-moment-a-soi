@@ -33,7 +33,7 @@ class ContactForm extends Component {
     fetch("/form", {
       method: "POST",
       headers: myHeaders,
-      body: "form-name=contact1&name=" + this.state.name + "&phone=" + this.state.phone + "&email=" + this.state.email + "&message=" + this.state.message
+      body: "form-name=contact&name=" + this.state.name + "&phone=" + this.state.phone + "&email=" + this.state.email + "&message=" + this.state.message
     })
     .then((res) => {
       if (res.status >= 400) {
@@ -55,7 +55,7 @@ class ContactForm extends Component {
   render() {
     return (
       !window ? null : (
-        <form onSubmit={this.handleSubmit} name="contact1" data-netlify="true">
+        <form onSubmit={this.handleSubmit} name="contact" data-netlify="true">
           <input type="text" name="name" placeholder="Nom" value={this.state.name} onChange={this.handleNameChange} required />
           <input type="tel" name="phone" placeholder="Téléphone" value={this.state.phone} onChange={this.handlePhoneChange} />
           <input type="email" name="email" placeholder="Email" value={this.state.email} onChange={this.handleEmailChange} required />
